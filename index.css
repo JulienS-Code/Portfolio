@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+:root {
+    --bg-color: #101930;
+    --txt-color: #becdea;
+}
+
+body{
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--bg-color);
+    color: white;
+}
+
+.container {
+    display: flex;
+    padding: 30px;
+}
+
+/* Partie fixe (gauche) */
+
+.fixe {
+    flex: 1;
+    width: 45%;
+    position: fixed;
+    margin: 2%;
+    left: 7%;
+}
+
+.fixe .me img {
+    width: 35%;
+    max-width: 200px;
+    border: 1px solid white;
+    border-radius: 100%;
+}
+
+.fixe .name {
+    font-size: 3.5vw;
+    font-weight: bold;
+    margin-top: 3%;
+    margin-bottom: 1%;
+}
+
+.fixe .status {
+    font-size: 18px;
+    color: var(--txt-color);
+}
+
+.fixe .link {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.fixe .link li {
+    padding: 10px;
+    position: relative;
+    font-size: 16px;
+}
+
+.fixe .link a {
+    color: var(--txt-color);
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+.fixe .link a:hover {
+    opacity: 1;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+/* Footer de la partie fixe (gauche) */
+
+.fixe .end_container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fixe .end_container img {
+    opacity: 0.5;
+    width: 25px;
+}
+
+.fixe .end_container a:hover {
+    color: white;
+    transition: 0.2s;
+}
+
+.fixe .end_container a:hover img {
+    opacity: 1;
+    transition: 0.2s;
+}
+
+
+/* Partie scroll (droite) */
+
+.scroll {
+    max-width: 35%;
+    position: absolute;
+    left: 50%;
+    padding: 50px;
+    color: var(--txt-color);
+}
+
+.scroll .title {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 40px;
+}    
+
+.scroll .presentation, .scroll .chronologie, .scroll .competences {
+    margin-bottom: 30%;
+}
+
+.scroll .presentation {
+    font-size: 17px;
+    text-align: justify;
+}
+
+.scroll .presentation a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+    
+.scroll .presentation a:hover {
+    color: #54d3d3;
+    transition: 0.2s;
+}
+
+/* Chronologie dans le scroll */
+
+    
+.scroll .chronologie .step {
+    display: flex;
+    margin-bottom: 10%;
+}    
+    
+.scroll .chronologie .step a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.scroll .chronologie .step a:hover {
+    color: #54d3d3;
+    transition: 0.2s;
+}
+
+.scroll .chronologie .step .date {
+    opacity: 0.5;
+    padding-right: 10px;
+    width: 40%;
+    padding-top: 2px;
+    font-size: 14px;
+}
+
+.scroll .chronologie .step .text_chrono{
+    text-align: justify;
+    padding-left: 2%;
+    font-size: 16px;
+    width: 100%;
+}
+
+
+/* Compétences dans le scroll */
+
+.competences {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.competences .python, .competences .html, .competences .css, .competences .sql{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4vw;
+}
+
+.progress {
+    background-color: lightslategray;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.value {
+    background-color: #163f8a;
+    padding: 0.3vw;
+    border-radius: 5px;
+}
+
+.competences .logo img {
+    width: 10vw;
+}
+
+.competences .sql .logo img {
+    width: 12vw;
+}
+
+.python .value {
+    width: 55%;
+}
+
+.python .logo{
+    margin: 2.5vw;
+}
+
+.html .value {
+    width: 65%;
+}
+
+.html .logo {
+    margin: 2vw;
+}
+
+.css .value {
+    width: 65%;
+}
+
+.css .logo {
+    margin: 3vw;
+}
+
+.sql .value {
+    width: 80%;
+}
+
+.sql .logo {
+    margin: 3vw;
+    margin-bottom: auto;
+}
+
+/* Projets dans le scroll */
+
+#projets {
+    border-radius: 10px;
+    padding: 3%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10%;
+}
+
+.projets {
+    text-decoration: none;
+    color: var(--txt-color);
+}
+
+.projets .image {
+    padding: 2%;
+}
+
+.projets .image img {
+    width: 10vw;
+}
+
+.projets .text_projet {
+    text-align: justify;
+    width: 65%;
+    font-size: 15px;
+    padding-left: 2%;
+}
+
+.projets:hover #projets{
+    background-color: #172548;
+    transition: 0.3s;
+}
+
+.text_fin {
+    text-align: justify;
+    font-size: 15px;
+}
+
+footer {
+    font-size: 15px;
+}
+
+
+/* Responsive */
+
+@media only screen and (max-width: 700px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .fixe {
+        position: relative;
+        max-width: 100%;
+        width: 100%;
+        padding-bottom: 10vw;
+    }
+
+    .scroll {
+        position: relative;
+        left: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .fixe .name {
+        font-size: 4vw;
+    }
+
+    .fixe .status {
+        font-size: 3vw;
+    }
+
+    .fixe .link li {
+        font-size: 2.8vw;
+    }
+
+    .scroll .title {
+        font-size: 3.2vw;
+    }
+
+    .scroll .presentation {
+        font-size: 3vw;
+    }
+
+    .scroll .chronologie .step .date {
+        font-size: 2.8vw;
+    }
+
+    .scroll .chronologie .step .text_chrono {
+        font-size: 3vw;
+    }
+
+    .projets #projets .image img {
+        width: 20vw;
+    }
+
+    .projets #projets .text_projet {
+        font-size: 3vw;
+    }
+
+    .scroll .text_fin {
+        font-size: 3vw;
+    }
+
+    footer {
+        font-size: 3vw;
+    }
+}
