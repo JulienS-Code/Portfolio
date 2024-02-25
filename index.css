@@ -260,6 +260,14 @@ body{
 
 .postgreSQL .logo {
     margin: 3vw;
+}
+
+.php .value {
+    width: 30%;
+}
+
+.php .logo {
+    margin: 3vw;
     margin-bottom: auto;
 }
 
