@@ -166,21 +166,25 @@ body{
 
 /* Compétences dans le scroll */
 
-.competences {
+.competences {  /* Container */
     display: flex;
     flex-wrap: wrap;
 }
 
-.competences .item{
+.competences .item{     /* Item-container */
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 4vw;
+    flex-grow: 1;
+    flex-basis: 180px;
+    max-width: 300px;
+    min-width: 100px;
+    margin: 2vw 0vw 2vw;
 }
 
 .progress {
     background-color: lightslategray;
-    width: 18vw;
+    width: 70%;
     border-radius: 5px;
 }
 
@@ -194,18 +198,7 @@ body{
     width: 10vw;
 }
 
-.competences .sql .logo img {
-    width: 12vw;
-}
-
-.competences .java .logo img {
-    width: 15vw;
-}
-
-.competences .c .logo img {
-    width: 9vw;
-}
-
+/* Python */
 .python .value {
     width: 55%;
 }
@@ -214,6 +207,12 @@ body{
     margin: 2.5vw;
 }
 
+.python .logo img{
+    max-width: 120px;
+    min-width: 70px;
+}
+
+/* Java */
 .java .value {
     width: 50%;
 }
@@ -222,6 +221,13 @@ body{
     margin-top: 2vw;
 }
 
+.java .logo img {
+    width: 15vw;
+    max-width: 250px;
+    min-width: 130px;
+}
+
+/* HTML */
 .html .value {
     width: 65%;
 }
@@ -230,6 +236,12 @@ body{
     margin: 2vw;
 }
 
+.html .logo img {
+    max-width: 150px;
+    min-width: 70px;
+}
+
+/* CSS */
 .css .value {
     width: 65%;
 }
@@ -238,6 +250,12 @@ body{
     margin: 3vw;
 }
 
+.css .logo img {
+    max-width: 140px;
+    min-width: 65px;
+}
+
+/* #C */
 .c .value {
     width: 60%;
 }
@@ -246,6 +264,13 @@ body{
     margin: 2vw;
 }
 
+.c .logo img {
+    width: 9vw;
+    max-width: 130px;
+    min-width: 60px;
+}
+
+/* SQL */
 .sql .value {
     width: 80%;
 }
@@ -254,6 +279,13 @@ body{
     margin: 3vw;
 }
 
+.sql .logo img{
+    width: 12vw;
+    max-width: 200px;
+    min-width: 100px;
+}
+
+/* PostgreSQL */
 .postgreSQL .value {
     width: 80%;
 }
@@ -262,6 +294,12 @@ body{
     margin: 3vw;
 }
 
+.postgreSQL .logo img {
+    max-width: 150px;
+    min-width: 70px;
+}
+
+/* PHP */
 .php .value {
     width: 30%;
 }
@@ -269,6 +307,11 @@ body{
 .php .logo {
     margin: 3vw;
     margin-bottom: auto;
+}
+
+.php .logo img {
+    max-width: 170px;
+    min-width: 80px;
 }
 
 /* Projets dans le scroll */
@@ -364,6 +407,10 @@ footer {
 
     .scroll .chronologie .step .text_chrono {
         font-size: 3vw;
+    }
+
+    .scroll .competences .item {
+        flex-basis: 20vw;
     }
 
     .projets #projets .image img {
