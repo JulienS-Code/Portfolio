@@ -171,7 +171,7 @@ body{
     flex-wrap: wrap;
 }
 
-.competences .python, .competences .html, .competences .css, .competences .sql{
+.competences .item{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -180,7 +180,7 @@ body{
 
 .progress {
     background-color: lightslategray;
-    width: 100%;
+    width: 18vw;
     border-radius: 5px;
 }
 
@@ -198,12 +198,28 @@ body{
     width: 12vw;
 }
 
+.competences .java .logo img {
+    width: 15vw;
+}
+
+.competences .c .logo img {
+    width: 9vw;
+}
+
 .python .value {
     width: 55%;
 }
 
 .python .logo{
     margin: 2.5vw;
+}
+
+.java .value {
+    width: 50%;
+}
+
+.java .logo {
+    margin-top: 2vw;
 }
 
 .html .value {
@@ -222,11 +238,27 @@ body{
     margin: 3vw;
 }
 
+.c .value {
+    width: 60%;
+}
+
+.c .logo {
+    margin: 2vw;
+}
+
 .sql .value {
     width: 80%;
 }
 
 .sql .logo {
+    margin: 3vw;
+}
+
+.postgreSQL .value {
+    width: 80%;
+}
+
+.postgreSQL .logo {
     margin: 3vw;
     margin-bottom: auto;
 }
